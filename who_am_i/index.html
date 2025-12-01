@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="/css/topbar.css">
   <style>
     body {
-      font-family: sans-serif;
+      font-family: consolas;
       max-width: 1000px;
+      width: auto;
       margin: 0 auto;
       padding: 2rem;
       padding-top: calc(3rem + var(--topbar-height));
-      background-image: url("/assets/webbysite_bgtile_bigger_red.png");
+      background-image: url("/assets/important/webbysite_bgtile_bigger_red.png");
       animation: movingBackground 10s linear infinite;
     }
     @keyframes movingBackground {
@@ -26,14 +27,27 @@
       width: 1000px;
       padding: 10px;
     }
+    #container {
+      position: relative;
+      width: 75vw;
+      height: 46vw;
+      top: 50%;
+      left: 50%;
+      margin-left: -37.5vw;
+      background: #fff;
+      display: flex;
+      flex-flow: column;
+      overflow: hidden;
+    }
   </style>
 </head>
 
 <body>
   <div id="topbar"></div>
   <script src="/js/loadShared.js"></script>
-  <div id="content">
-  <h1>hey BUDDY!!</h1>
+  <div id="container">
+  <h1>hey BUDDY!!<img src="/assets/gif dump/wormlook.gif"></h1>
+  
   <div id="prefaceMessage"></div>
     <script src="/js/randomMessage.js"></script>
     <script>
@@ -54,11 +68,11 @@
 
     <section class="bio">
       <p>
-        I am Charlie and Charlie is I. I'll occasionally humor such names as Charl, Chazburger, Charfunkle, Chucklebucket, Charnely, Charles Lee, C-Buddy, C-Dawg, Chimp, Chump, Chizzle, Chag, Chester, Buddythwomp, the Big Do, Chuck, Chaz, Chez, Chiz, Charleston, Professor Albuquerque, Chuckleberry, Bizmo-Buddy, Prunklehead, Charlemagne Cheddarfist, Char-Char, and Carlos, but I'd prefer if you'd hold the fanfare. I was born in Sarasota, Florida, though I've spent the majority of my life dotting around Indiana. I am freshly 18 and soon done with high school. I do not mesh with the path that has been decided for me as an American youth and find it cathartic to know I have some level of autonomy over it now. I am incredibly fortunate.
+        I am Charlie and Charlie is I. I'll occasionally humor such names as Charl, Chazburger, Charfunkle, Chucklebucket, Charnely, Charles Lee, C-Buddy, C-Dawg, Chimp, Chump, Chizzle, Chag, Chester, Buddythwomp, the Big Do, Chuck, Chaz, Chez, Chiz, Charleston, Professor Albuquerque, Chuckleberry, Bizmo-Buddy, Prunklehead, Charlemagne Cheddarfist, Char-Char, and Carlos, but I'd prefer if you'd hold the fanfare. I was born in Sarasota, Florida, though I've spent the majority of my life dotting around Indiana. I am freshly 18 and done with high school. I do not mesh with the path that has been decided for me as an American youth and find it cathartic to know I have some level of autonomy over it now. I am incredibly fortunate in many ways.
       </p>
 
       <p>
-        I choose to base my life around production over consumption. If you want to see more of what I make check out my <a href="/past_glories">PAST GLORIES</a>. I like to throw my hours at "the arts" but most of my time lands in front of the <a href="https://en.wikipedia.org/wiki/Computer" target="_blank">computer</a>. Game development is not a passion but a lifeline. A prophetic endeavor that has had hold of me from the ripe old age of four. I remember it like yesterMay when my younger'nt brother said "You know, people MAKE the games we play." I just never would've thought...
+        I choose to base my life around production over consumption. If you want to see what I make check out my <a href="/past_glories">PAST GLORIES</a>. I like to throw my hours at "the arts" but most of my time lands in front of the <a href="https://en.wikipedia.org/wiki/Computer" target="_blank">computer</a>. Game development is not a passion but a lifeline. A prophetic endeavor that has had hold of me from the ripe old age of four. I remember it like yesterMay when my younger'nt brother said "You know, people MAKE the games we play." I just never would've thought...
       </p>
 
       <p>
@@ -74,7 +88,7 @@
       </p>
 
       <p>
-        Maybe I'm in the mood to watch stuff again--maybe I'm talking about shows, movies, cartoons and the works. I enjoy an oo, maybe an ah. I enjoy looking at little things on screen zip around with bright colors and big movements. See my <a href="/percolation/movies/">fav movies here</a>, <a href="/percolation/cartoons/">cartoons here</a>. I should mention I am not able to get over Xavier Renegade Angel nor Napoleon Dynamite after multiple watches and multiple years--the shortest path to the deepest ventricle of my chest-pounder is my funny bone. Freak anatomy aside, I enjoy a good laugh above all else, regardless of medium.
+        Maybe I'm in the mood to watch stuff again--maybe I'm talking about shows, movies, cartoons and the works. I enjoy an oo, maybe an ah. I enjoy looking at little things on screen zip around with bright colors and big movements. See my <a href="/percolation/movies/">fav movies here</a>, <a href="/percolation/cartoons/">cartoons here</a>. I should mention I am not able to get over Napoleon Dynamite nor Xavier Renegade Angel after multiple watches and multiple years--the shortest path to the deepest ventricle of my chest-pounder is by way of funny bone. Freak anatomy aside, I enjoy a good laugh above all else, regardless of medium.
       </p>
 
       <p>
@@ -82,7 +96,7 @@
       </p>
 
       <p>
-        I enjoy rock climbing. I have climbed exclusively indoors with hopes to touch real rock. Camping, backpacking, and caving have all been fascinating ideas to me but have not been actionable yet.
+        I enjoy rock climbing. I have climbed exclusively indoors with hopes to touch real rock soon. Camping, backpacking, and caving have all been fascinating ideas to me but have not been actionable yet.
       </p>
 
       <p>
@@ -98,7 +112,7 @@
       </p>
 
       <p>
-        I've used Obsidian for a good chunk of time now and always had the desire to write to eyes other than my own; if you want more of my words check out  <a href="/whims">WHIMS</a> to see what I've written up. If you would like to finish the conversation I have started you can contact me at <a href="/send_word">SEND WORD</a>, where you can find my buddypals and externals as well. This website is one big self indulgent swamp of Charlie from tip to taint--if this page has not exhausted you there are plenty more that will.
+        I've used Obsidian for a good chunk of time now and always had the desire to write to eyes other than my own; if you want more of my words check out <a href="/whims">WHIMS</a> to see what I've written up. If you would like to finish the conversation I have started you can contact me at <a href="/send_word">SEND WORD</a>, where you can find my buddypals and externals as well. This website is one big self indulgent swamp of Charlie from tip to taint--if this page has not exhausted you there are plenty more that will.
       </p>
 
       <p>
