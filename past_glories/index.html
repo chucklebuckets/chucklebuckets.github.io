@@ -1,106 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Whims</title>
+  <title>PAST GLORIES</title>
   <meta charset="UTF-8" />
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .post {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 2rem;
-      margin-bottom: 2rem;
-    }
-    .post-title {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .loader {
-      text-align: center;
-      padding: 2rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1rem 0;
-    }
-  </style>
 </head>
 <body>
   <h1>hey BUDDY!!</h1>
-  <p>check my post!!<p>
+  <p>nothing to see here<p>
   <h2>Navigatory</h2>
-  <a href="/">gobackkj</a>
-  <div id="feed"></div>
-  <div class="loader" id="loader">crappa quit it! loading 'em.</div>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    const feed = document.getElementById('feed');
-    const loader = document.getElementById('loader');
-    // Big crappy frickin' list of all the .md files in order
-    // I hope for a better solution one day, but this works for now
-    const posts = [
-      'projects/examplecrap1.md'
-    ];
-
-    let currentIndex = 0;
-    let loading = false;
-
-    function extractFilename(path) {
-      const parts = path.split('/');
-      return parts[parts.length - 1].replace(/\.md$/, '');
-    }
-
-    async function loadNextPost() {
-      if (loading || currentIndex >= posts.length) return; // return nothing if currently loading post or all posts have been loaded
-      loading = true;
-
-      const path = posts[currentIndex];
-      const res = await fetch(posts[currentIndex]);
-      const md = await res.text();
-      const html = marked.parse(md)
-
-      const article = document.createElement('div');
-      article.className = 'post';
-
-      const title = document.createElement('div');
-      title.className = 'post-title';
-      title.textContent = extractFilename(path);
-
-      article.appendChild(title);
-      article.innerHTML = html;
-
-      const imgs = article.querySelectorAll('img');
-      imgs.forEach(img => {
-        img.loading = 'lazy';
-      });
-
-      feed.appendChild(article);
-
-      currentIndex++;
-      loading = false;
-
-      if (currentIndex >= posts.length) {
-        loader.textContent = 'No more posts.';
-      }
-    }
-
-    // Initial post
-    loadNextPost();
-
-    window.addEventListener('scroll', () => {
-      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight - 200) {
-        loadNextPost();
-      }
-    });
-  </script>
+  <a href="/">goback</a>
 </body>
 </html>
-  
