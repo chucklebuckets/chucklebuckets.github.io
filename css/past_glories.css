@@ -1,10 +1,42 @@
-body {
-    background-image: url(/assets/important/spac.gif);
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow-x: hidden;
     overflow-y: hidden;
+}
+
+body {
+    background-image: url(/assets/backgrounds/spac.gif);
+}
+
+.screensaver-area {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.screensaver-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    image-rendering: pixelated;
+    user-select: none;
+    pointer-events: all;
+    will-change: transform;
+    /* outline: 2px solid red; for debugging hitboxes */
+}
+
+#camera-icon {
+    width: 15vw;
+}
+
+#inkor-icon {
+    width: 10vw;
+}
+
+#master-icon {
+    width: 8vw;
 }
