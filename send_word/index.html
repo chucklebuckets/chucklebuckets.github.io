@@ -4,16 +4,75 @@
 
   <title>SEND WORD</title>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/send_word.css">
 </head>
 
 
-<body>
+<body class="custom-cursor-on">
 
-  <div class="screensaver-area">
-    <img class="screensaver-icon" id="camera-icon" src="/assets/gif dump/spinthing.gif" data-start-x="500" data-start-y="500" data-vel-x="1" data-vel-y="1">
+  <div id="custom-cursor">
+
+    <img src="/assets/send_word/smallcursor.gif" id="custom-cursor-img">
+
+    <div id="custom-cursor-text">
+      <span id="cursor-text-outline" class="cursor-text-layer"></span>
+      <span id="cursor-text-fill" class="cursor-text-layer"></span>
+    </div>
+
   </div>
+  
+  <audio id="wizard-sound" src="/assets/send_word/secretsnake.mp3" preload="auto"></audio>
+  <audio id="fire-sound" src="/assets/send_word/fireball.mp3" preload="auto"></audio>
+  <audio id="whirlwind-sound" src="/assets/send_word/windcharge.mp3" preload="auto"></audio>
+  <audio id="instruction-sound" src="/assets/send_word/fart.mp3" preload="auto"></audio>
+  <audio id="spikes-sound" src="/assets/send_word/thwomp.mp3" preload="auto"></audio>
+  
+  <main class="screen">
+    <div class="stage">
 
+      <img src="/assets/send_word/guy3.gif" class="page-art">
+
+      <a
+        class="click-area" id="wizard"
+        href="https://www.youtube.com/@charl732" target="_blank" rel="noopener noreferrer"
+        data-cursor-text="PEEP MY YOUTUBE CHANNEL IF YOU DARE!"
+        data-sound="wizard-sound">
+      </a>
+      <a
+        class="click-area" id="fire"
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=hellochucklebucket@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-cursor-text="SHOOT ME AN EMAIL, PALLY!"
+        data-sound="fire-sound">
+      </a>
+      <a
+        class="click-area" id="whirlwind"
+        href="https://chazburger.itch.io/" target="_blank" rel="noopener noreferrer"
+        data-cursor-text="JUST CAN'T SCRATCH THAT ITCH..."
+        data-sound="whirlwind-sound">
+      </a>
+      <button
+        class="click-area" id="instructions"
+        data-cursor-text="THE OTHER ORANGE YOU DITZ!"
+        data-sound="instruction-sound">
+      </button>
+      <a
+        class="click-area" id="spikes"
+        href="https://tacfolio.rf.gd/" target="_blank" rel="noopener noreferrer"
+        data-cursor-text="CHECK OUT THIS OTHER WEBSITE!!!"
+        data-sound="spikes-sound">
+      </a>
+      <a
+        class="click-area" id="spikes2"
+        href="https://tacfolio.rf.gd/" target="_blank" rel="noopener noreferrer"
+        data-cursor-text="CHECK OUT THIS OTHER WEBSITE!!!"
+        data-sound="spikes-sound">
+      </a>
+
+    </div>
+  </main>
+
+  <script src="/js/cursor.js"></script>
 </body>
 </html>
