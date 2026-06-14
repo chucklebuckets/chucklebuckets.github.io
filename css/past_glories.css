@@ -11,6 +11,14 @@ body {
     background-image: url(/assets/backgrounds/spac.gif);
 }
 
+#instructions {
+    position: fixed;
+    left: 50vw;
+    bottom: 1vh;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
 .screensaver-area {
     position: absolute;
     inset: 0;
