@@ -4,3 +4,198 @@
     font-weight: normal;
     font-style: normal;
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stage {
+    position: relative;
+    aspect-ratio: 1920 / 1080;
+    width: min(100vw, calc(100vh * 1920 / 1080));
+    background: black;
+    overflow: hidden;
+    container-type: inline-size;
+}
+
+.img-display {
+    position: absolute;
+    left: 80.25%;
+    top: 35%;
+
+    width: 37%;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+    aspect-ratio: 1 / 1;
+}
+
+.img-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    image-rendering: pixelated;
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.content {
+    position: absolute;
+
+    left: 0.704%;
+    top: 0.704%;
+
+    width: 98.592%;
+    height: 98.592%;
+
+    object-fit: cover;
+    image-rendering: pixelated;
+    z-index: 4;
+}
+
+.wizard {
+    position: absolute;
+    left: 87%;
+    top: 84%;
+
+    width: 29%;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.feed {
+    position: absolute;
+
+    left: 1cqw;
+    top: 1cqw;
+    bottom: 1cqw;
+    width: 59%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+    border: 0.3125cqw solid #ff6f00; /* 6px at 1920px wide */
+    padding: 0.8cqw;
+
+}
+
+.entry {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 0.8cqw;
+
+    background: black;
+    border: 0.3125cqw solid #ff6f00;
+
+    color: white;
+    font-family: squidwiener;
+    font-size: 2.5cqw;
+    line-height: 1.25;
+    text-align: left;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+.entry-title, .entry-link {
+    padding: 1cqw;
+}
+
+/* -------------------------------------------------------------------------- */
+/* dis shit all for the stupid little arrows */
+.entry-title {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+
+    padding: 1cqw 1.2cqw;
+    padding-left: 3.4cqw;
+}
+
+/* additional tidbit for hiding the default triangle */
+.entry-title::-webkit-details-marker {
+    display: none;
+}
+
+.entry-link {
+    position: relative;
+
+    padding: 1cqw 1.2cqw;
+    padding-left: 3.4cqw;
+}
+
+.entry-title::before, .entry-link::before {
+    content: "";
+
+    position: absolute;
+    left: 1cqw;
+    top: 50%;
+
+    width: 1.7cqw;
+    height: 1.7cqw;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: translateY(-50%);
+    image-rendering: pixelated;
+}
+
+.entry-title::before {
+    background-image: url("/assets/whims/arrow_right.gif");
+}
+
+.entry[open] summary::before {
+    background-image: url("/assets/whims/arrow_down.gif");
+}
+
+.entry-link::before {
+    background-image: url("/assets/whims/arrow_further.gif");
+}
+/* -------------------------------------------------------------------------- */
+
+.entry-body {
+    padding: 0cqw 1.2cqw 1.1cqw 1.2cqw;
+    color: white;
+    font-family: consolas;
+    font-size: 1.2cqw;
+    line-height: 1.25;
+}
+
+.entry-body p {
+    margin: 0;
+}
+
+.entry:last-child { /* this just prevents the bottom most entry from having a gap under it */
+    margin-bottom: 0;
+}
