@@ -35,21 +35,58 @@ body {
     container-type: inline-size;
 }
 
+/* -------------------------------------------------------------------------- */
+/* dis shit all for the stupid little image display */
 .img-display {
     position: absolute;
-    left: 80.25%;
+    left: 80.5%;
     top: 35%;
 
-    width: 37%;
+    transform: translate(-50%, -50%);
+}
+
+.img-placeholder {
+    position: absolute;
+    left: 80%;
+    top: 45%;
+
+    width: 31.25%;
     height: auto;
 
     transform: translate(-50%, -50%);
 
-    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    image-rendering: pixelated;
+    z-index: 3;
+}
+
+.img-border, .content {
+    position: absolute;
+    image-rendering: pixelated;
+    display: none;
+}
+
+.img-display.show .img-border,
+.img-display.show .content {
+    display: block;
+}
+
+.img-display.square {
+    width: 37%;
+    aspect-ratio: 710 / 710;
+}
+
+.img-display.wide {
+    width: 37%;
+    aspect-ratio: 710 / 535;
+}
+
+.img-display.tall {
+    width: 29.6875%;
+    aspect-ratio: 570 / 710;
 }
 
 .img-border {
-    position: absolute;
     left: 0;
     top: 0;
 
@@ -57,25 +94,61 @@ body {
     height: 100%;
 
     object-fit: contain;
-    image-rendering: pixelated;
     z-index: 5;
-
     pointer-events: none;
 }
 
 .content {
-    position: absolute;
+    object-fit: cover;
+    z-index: 4;
+}
 
+/* funky values b/c 5px inset inside 710x710 border */
+.img-display.square .content {
     left: 0.704%;
     top: 0.704%;
 
     width: 98.592%;
     height: 98.592%;
-
-    object-fit: cover;
-    image-rendering: pixelated;
-    z-index: 4;
 }
+
+/* 5px inset inside 710x535 border */
+.img-display.wide .content {
+    left: 0.704%;
+    top: 0.935%;
+
+    width: 98.592%;
+    height: 98.131%;
+}
+
+/* 5px inset inside 570x710 border */
+.img-display.tall .content {
+    left: 0.877%;
+    top: 0.704%;
+
+    width: 98.246%;
+    height: 98.592%;
+}
+
+.img-thought-bubble {
+    position: absolute;
+    left: 85.5%;
+    top: 70%;
+
+    width: 7.8125%;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.img-word {
+    color: #ff6f00;
+    cursor: help;
+}
+/* -------------------------------------------------------------------------- */
 
 .wizard {
     position: absolute;
@@ -90,6 +163,30 @@ body {
     object-fit: contain;
     image-rendering: pixelated;
 }
+
+.arrow-master {
+    position: absolute;
+    left: 64%;
+    top: 94%;
+
+    width: 5.7%;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+
+    display: block;
+    z-index: 10;
+}
+
+.arrow-master img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
 
 .feed {
     position: absolute;
