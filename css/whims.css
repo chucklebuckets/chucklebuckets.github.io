@@ -58,6 +58,8 @@ body {
     object-fit: contain;
     image-rendering: pixelated;
     z-index: 3;
+
+    user-select: none;
 }
 
 .img-border, .content {
@@ -96,11 +98,15 @@ body {
     object-fit: contain;
     z-index: 5;
     pointer-events: none;
+
+    user-select: none;
 }
 
 .content {
     object-fit: cover;
     z-index: 4;
+
+    user-select: none;
 }
 
 /* funky values b/c 5px inset inside 710x710 border */
@@ -142,6 +148,8 @@ body {
 
     object-fit: contain;
     image-rendering: pixelated;
+
+    user-select: none;
 }
 
 .img-word {
@@ -162,6 +170,8 @@ body {
 
     object-fit: contain;
     image-rendering: pixelated;
+
+    user-select: none;
 }
 
 .arrow-master {
@@ -176,6 +186,8 @@ body {
 
     display: block;
     z-index: 10;
+
+    user-select: none;
 }
 
 .arrow-master img {
@@ -282,16 +294,23 @@ body {
 /* -------------------------------------------------------------------------- */
 
 .entry-body {
-    padding: 0cqw 1.2cqw 1.1cqw 1.2cqw;
+    padding: 0cqw 1.2cqw .3cqw 1.2cqw;
     color: white;
     font-family: consolas;
-    font-size: 1.2cqw;
+    font-size: 1.3rem;
     line-height: 1.25;
-    text-indent: 4ch;
+    text-indent: 3rem;
 }
 
 .entry-body p {
     margin: 0;
+}
+
+.entry-date {
+    line-height: 2;
+    font-size: 1rem;
+    text-align: right;
+    text-indent: 0rem;
 }
 
 .entry:last-child { /* this just prevents the bottom most entry from having a gap under it */
